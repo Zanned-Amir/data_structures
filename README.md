@@ -44,6 +44,34 @@ The `LinkedList` class is defined in the `linkedlist.rb` file. It represents a s
 
 - `to_s`: Returns a string representation of the list.
 
+## Binary Tree
+
+The `binary_tree.rb` file contains an implementation of a binary search tree. The tree supports the following operations:
+
+### Binary Tree Methods
+
+- `insert(data)`: Adds a new node with the given data to the tree.
+
+- `delete(data)`: Removes the node with the given data from the tree.
+
+- `find(data)`: Searches for a node with the given data in the tree.
+
+- `depth(node)`: Returns the depth of the given node in the tree.
+
+- `balanced?`: Checks if the tree is balanced.
+
+- `rebalance`: Rebalances the tree.
+
+- `inorder`: Performs an inorder traversal of the tree.
+
+- `preorder`: Performs a preorder traversal of the tree.
+
+- `postorder`: Performs a postorder traversal of the tree.
+
+- `level_order`: Performs a level order (breadth-first) traversal of the tree.
+
+- `height(node)`: Returns the height of the given node in the tree.
+
 ## Usage
 
 To use these classes, simply require the appropriate file in your Ruby script:
@@ -51,6 +79,7 @@ To use these classes, simply require the appropriate file in your Ruby script:
 ```ruby
 require_relative 'hashmap'
 require_relative 'linkedlist'
+require_relative 'binary_tree'
 
 hash_map = HashMap.new
 hash_map.set('key', 'value')
@@ -59,4 +88,10 @@ puts hash_map.get('key')  # Outputs: value
 list = LinkedList.new
 list.append('value')
 puts list.head  # Outputs: value
+
+tree = BinaryTree.new
+tree.insert(10)
+tree.insert(5)
+tree.insert(15)
+puts tree.balanced?  # Outputs: true
 ```
