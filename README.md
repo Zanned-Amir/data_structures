@@ -1,16 +1,12 @@
-# data_structures
+# Data Structures in Ruby
 
-Data structures as part of The Odin Project curriculum
-
-1. HashMap Implementation in Ruby
-
-This repository contains a simple implementation of a HashMap in Ruby.
+This repository contains simple implementations of a HashMap and a LinkedList in Ruby.
 
 ## HashMap Class
 
 The `HashMap` class is defined in the `hashmap.rb` file. It uses an array of buckets to store key-value pairs and handles collisions using chaining.
 
-### Methods
+### HashMap Methods
 
 - `initialize(load_factor = 0.75)`: Initializes a new HashMap with a default load factor of 0.75. The load factor is the threshold at which the HashMap will resize its array of buckets.
 
@@ -20,22 +16,11 @@ The `HashMap` class is defined in the `hashmap.rb` file. It uses an array of buc
 
 - `get(key)`: Retrieves the value associated with the given key.
 
-## Usage
-
-To use the `HashMap` class, simply require the `hashmap.rb` file in your Ruby script:
-
-````ruby
-require_relative 'hashmap'
-
-hash_map = HashMap.new
-hash_map.set('key', 'value')
-puts hash_map.get('key')  # Outputs: value
-
-2. LinkedList Class
+## LinkedList Class
 
 The `LinkedList` class is defined in the `linkedlist.rb` file. It represents a singly linked list.
 
-### Methods
+### LinkedList Methods
 
 - `initialize`: Initializes a new LinkedList. The list starts out empty.
 
@@ -61,13 +46,17 @@ The `LinkedList` class is defined in the `linkedlist.rb` file. It represents a s
 
 ## Usage
 
-To use the `LinkedList` class, simply require the `linkedlist.rb` file in your Ruby script:
+To use these classes, simply require the appropriate file in your Ruby script:
 
 ```ruby
+require_relative 'hashmap'
 require_relative 'linkedlist'
+
+hash_map = HashMap.new
+hash_map.set('key', 'value')
+puts hash_map.get('key')  # Outputs: value
 
 list = LinkedList.new
 list.append('value')
 puts list.head  # Outputs: value
-
-````
+```
