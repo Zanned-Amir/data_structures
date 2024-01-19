@@ -72,6 +72,8 @@ The `binary_tree.rb` file contains an implementation of a binary search tree. Th
 
 - `height(node)`: Returns the height of the given node in the tree.
 
+- `pretty_print`: Prints a graphical representation of the tree.
+
 ## Usage
 
 To use these classes, simply require the appropriate file in your Ruby script:
